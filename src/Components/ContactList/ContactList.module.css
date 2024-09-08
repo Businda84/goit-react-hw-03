@@ -1,3 +1,12 @@
-.contactContainer{
+
+ul{
     list-style: none;
+}
+.contactContainer{
+    border: 2px solid black;
+    border-radius: 20px;
+margin: 20px;
+padding: 20px;
+width: auto;
+height: auto;
 }

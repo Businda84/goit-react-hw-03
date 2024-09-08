@@ -1,5 +1,6 @@
 import { Field, Formik, Form } from "formik";
 import * as Yup from "yup";
+import css from './ContactForm.module.css'
 
 const contactSchema = Yup.object({
   name: Yup.string()
@@ -29,9 +30,10 @@ export default function ContactForm({ onAdd }) {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={contactSchema}
+      
     >
-      <Form>
-        <label htmlFor="name">name</label>
+      <Form >
+        <label htmlFor="name" >name</label>
         <Field type="text" name="name" />
 
         <label htmlFor="userContacId">namber phone</label>
