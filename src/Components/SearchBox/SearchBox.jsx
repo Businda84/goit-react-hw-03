@@ -1,5 +1,6 @@
 
 import { useId } from "react";
+
 export default function SearchBox({ value, onSearch }) {
     const searchId =useId()
     return (

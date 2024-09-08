@@ -6,18 +6,19 @@ import SearchBox from '../SearchBox/SearchBox'
 import ContactList from '../ContactList/ContactList'
 import myContacts from '../../contacts.json'
 
+// console.log(myContacts);
 
 
 export default function App() {
  
 
   const [contacts, setContacts] = useState(() => {
-     const savedContacts = window.localStorage.getItem('my-contact');
+    const savedContacts = window.localStorage.getItem('my-contact');
     if (savedContacts !== null) {
       return JSON.parse(savedContacts);
     }
     return myContacts;
-  })
+  });
   
   const [searchContact,setSearchContact] = useState('');
    const addContact = (newContact) => {
@@ -42,7 +43,7 @@ export default function App() {
 
   <h1>Phonebook</h1>
   <ContactForm onAdd={addContact} />
-      <SearchBox value={searchContact} onSearch={ setSearchContact} />
+  <SearchBox value={searchContact} onSearch={ setSearchContact} />
   <ContactList contacts={foundСontacts} onDelete={deleteContact} />
 </div>
   )
