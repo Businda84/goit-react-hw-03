@@ -1,3 +1,6 @@
 .searchContainer{
-  padding: 50px;
+gap: 10px;
+}
+.labelText{
+    padding: 30px;
 }
