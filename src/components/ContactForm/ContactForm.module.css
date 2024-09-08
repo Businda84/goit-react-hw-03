@@ -1,3 +1,9 @@
 .contactFormContainer{
     border: 2px solid black;
 }
+.labelText{
+    margin: 30px;
+}
+.contactItem{
+    margin: 30px;
+}

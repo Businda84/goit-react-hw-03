@@ -33,12 +33,12 @@ export default function ContactForm({ onAdd }) {
       validationSchema={contactSchema}
       
     >
-      <Form >
+      <Form className={css.labelText}>
         <label htmlFor="name" >name</label>
-        <Field type="text" name="name" />
+        <Field type="text" name="name" className={css.contactItem}/>
 
         <label htmlFor="userContacId">namber phone</label>
-        <Field type="text" name="number" />
+        <Field type="text" name="number" className={css.contactItem}/>
 
         <button type="submit"> add contact</button>
       </Form>
