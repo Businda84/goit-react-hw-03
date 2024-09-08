@@ -41,6 +41,7 @@ export default function ContactForm({ onAdd }) {
 
         <button type="submit"> add contact</button>
       </Form>
+      
     </Formik>
   );
 }
