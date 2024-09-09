@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 import  './App.css'
 import ContactForm from '../ContactForm/ContactForm'
@@ -26,7 +26,9 @@ export default function App() {
       return [...prevContacts, newContact];
     });
    };
-  
+   useEffect(() => {
+    window.localStorage.setItem("my-contacts", JSON.stringify(contacts));
+  }, [contacts]);
   const foundСontacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(searchContact.toLowerCase())
   );
@@ -38,6 +40,7 @@ export default function App() {
       
     )
   }
+  
   return (
     <div>
 
