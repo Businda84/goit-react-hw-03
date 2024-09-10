@@ -13,7 +13,7 @@ export default function App() {
  
 
   const [contacts, setContacts] = useState(() => {
-    const savedContacts = window.localStorage.getItem('my-contact');
+    const savedContacts = window.localStorage.getItem('my-contacts');
     if (savedContacts !== null) {
       return JSON.parse(savedContacts);
     }
